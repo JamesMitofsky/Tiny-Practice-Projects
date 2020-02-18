@@ -29,18 +29,18 @@ for (i = 1; i < gifts.length +1; i++) {
     givenToday.forEach(gift => {
 
         // count how many gifts were given on today or past day (because the index of gifts will be counted from zero, this calculates correctly)
-        let quantityOfGift = givenToday.length - givenToday.indexOf(gift)
+        let quantityOfThisGift = givenToday.length - givenToday.indexOf(gift)
 
-        // format gift strings based on patridge gift
-        if(quantityOfGift > 1) {
-            // format as item in list
-            console.log(`${quantityOfGift} ${gift},`)
+        // format gift strings based on which day of christmas and how many of each gift are given
+        if(quantityOfThisGift > 1) {
+            // format gift as being not the final gift
+            console.log(`${quantityOfThisGift} ${gift},`)
 
-          // if the day is not the first, format as adendum after other items
+          // if the *day of Christmas* is not the first, format gift as final item in a list
         } else if(i != 1) {
             console.log(`and a ${gift}.\n`)
 
-          // if first day, format as only gift given
+          // however, if we know it is the first *day of Christmas*, format gift as only one being given
         } else {
             console.log(`a ${gift}.\n`)
         }
