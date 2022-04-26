@@ -1,2 +1,2 @@
-# Simply-Shenanigans-Friend.
-just a few itsy bitsy side projects
+# Description
+A home for the code snippets I've created for one reason or another.
